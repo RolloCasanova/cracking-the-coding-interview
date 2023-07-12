@@ -48,5 +48,6 @@ go test -v ./interview_questions/...
 
 ### Progress
 
-- Chapter 1 - Arrays and Strings (1/9)
+- Chapter 1: Arrays and Strings (2/9)
   - [✅] [1.1 Is Unique](interview_questions/1_arrays_and_strings/1.1_is_unique)
+  - [✅] [1.2 Check Permutation](interview_questions/1_arrays_and_strings/1.2_check_permutation)
