@@ -50,11 +50,12 @@ go test -v ./interview_questions/...
 
 #### Chapter 1: Arrays and Strings (3/9)
 
-|  #  | Problem                   | Tests         | Solved |
-|-----|---------------------------|:-------------:|:------:|
-| 1.1 | [Is Unique][p1.1]         | [tests][t1.1] |   ✅   |
-| 1.2 | [Check Permutation][p1.2] | [tests][t1.2] |   ✅   |
-| 1.3 | [URLify][p1.3]            | [tests][t1.3] |   ✅   |
+|  #  | Problem                        | Tests         | Solved |
+|-----|--------------------------------|:-------------:|:------:|
+| 1.1 | [Is Unique][p1.1]              | [tests][t1.1] |   ✅   |
+| 1.2 | [Check Permutation][p1.2]      | [tests][t1.2] |   ✅   |
+| 1.3 | [URLify][p1.3]                 | [tests][t1.3] |   ✅   |
+| 1.4 | [Palindrome Permutation][p1.4] | [tesst][t1.4] |   ✅   |
 
 <!-- References -->
 [p1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/main.go
@@ -63,3 +64,5 @@ go test -v ./interview_questions/...
 [t1.2]: interview_questions/1_arrays_and_strings/1.2_check_permutation/main_test.go
 [p1.3]: interview_questions/1_arrays_and_strings/1.3_urlify/main.go
 [t1.3]: interview_questions/1_arrays_and_strings/1.3_urlify/main_test.go
+[p1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/main.go
+[t1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/main_test.go
