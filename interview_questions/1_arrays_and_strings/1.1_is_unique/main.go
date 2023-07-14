@@ -7,15 +7,12 @@ import (
 )
 
 func main() {
-	// read input from execution arguments
 	if len(os.Args) != 2 {
-		fmt.Println("Usage: go run main.go <string>")
-		os.Exit(1)
+		panic("Usage: go run main.go <string>")
 	}
 
 	s := os.Args[1]
 
-	// check if string is unique
 	unique, err := isUnique(s)
 
 	if err != nil || !unique {

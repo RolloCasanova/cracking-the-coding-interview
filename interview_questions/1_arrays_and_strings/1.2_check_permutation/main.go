@@ -8,8 +8,7 @@ import (
 
 func main() {
 	if len(os.Args) != 3 {
-		fmt.Println("Usage: go run main.go <string1> <string2>")
-		os.Exit(1)
+		panic("Usage: go run main.go <string1> <string2>")
 	}
 
 	s1 := os.Args[1]
