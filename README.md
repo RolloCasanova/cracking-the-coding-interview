@@ -48,7 +48,7 @@ go test -v ./interview_questions/...
 
 ### Progress
 
-#### Chapter 1: Arrays and Strings (3/9)
+#### Chapter 1: Arrays and Strings (5/9)
 
 |  #  | Problem                        | Tests         | Solved |
 |-----|--------------------------------|:-------------:|:------:|
@@ -56,6 +56,7 @@ go test -v ./interview_questions/...
 | 1.2 | [Check Permutation][p1.2]      | [tests][t1.2] |   ✅   |
 | 1.3 | [URLify][p1.3]                 | [tests][t1.3] |   ✅   |
 | 1.4 | [Palindrome Permutation][p1.4] | [tesst][t1.4] |   ✅   |
+| 1.5 | [One Away][p1.5]               | [tests][t1.5] |   ✅   |
 
 <!-- References -->
 [p1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/main.go
@@ -66,3 +67,5 @@ go test -v ./interview_questions/...
 [t1.3]: interview_questions/1_arrays_and_strings/1.3_urlify/main_test.go
 [p1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/main.go
 [t1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/main_test.go
+[p1.5]: interview_questions/1_arrays_and_strings/1.5_one_away/main.go
+[t1.5]: interview_questions/1_arrays_and_strings/1.5_one_away/main_test.go
