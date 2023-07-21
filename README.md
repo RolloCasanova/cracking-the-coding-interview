@@ -48,7 +48,7 @@ go test -v ./interview_questions/...
 
 ### Progress
 
-#### Chapter 1: Arrays and Strings (6/9)
+#### Chapter 1: Arrays and Strings (7/9)
 
 |  #  | Problem                        | Solution         | Tests         | Solved |
 |-----|--------------------------------|:----------------:|:-------------:|:------:|
@@ -58,6 +58,7 @@ go test -v ./interview_questions/...
 | 1.4 | [Palindrome Permutation][p1.4] | [solution][s1.4] | [tests][t1.4] |   ✅   |
 | 1.5 | [One Away][p1.5]               | [solution][s1.5] | [tests][t1.5] |   ✅   |
 | 1.6 | [String Compression][p1.6]     | [solution][s1.6] | [tests][t1.6] |   ✅   |
+| 1.7 | [Rotate Matrix][p1.7]          | [solution][s1.7] | [tests][t1.7] |   ✅   |
 
 <!-- References -->
 [p1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/README.md
@@ -78,3 +79,6 @@ go test -v ./interview_questions/...
 [p1.6]: interview_questions/1_arrays_and_strings/1.6_string_compression/README.md
 [s1.6]: interview_questions/1_arrays_and_strings/1.6_string_compression/main.go
 [t1.6]: interview_questions/1_arrays_and_strings/1.6_string_compression/main_test.go
+[p1.7]: interview_questions/1_arrays_and_strings/1.7_rotate_matrix/README.md
+[s1.7]: interview_questions/1_arrays_and_strings/1.7_rotate_matrix/main.go
+[t1.7]: interview_questions/1_arrays_and_strings/1.7_rotate_matrix/main_test.go
