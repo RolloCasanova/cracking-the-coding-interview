@@ -3,60 +3,48 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 	"strings"
+
+	"github.com/RolloCasanova/cracking-the-coding-interview/interview_questions/utils"
 )
 
 func main() {
 	// get the matrix as a slice of slices from stdin
-	// first parameter is the number of rows
-	// following parameters are the rows
+	// all rows must be the same length
 	// each row is a string of space separated integers
 	//
 	// example:
-	// 3 "1 2 3" "4 5 6" "7 8 9"
-	// 4 "1 2 3 4" "5 6 7 8" "9 10 11 12" "13 14 15 16"
-	// 5 "1 2 3 4 5" "6 7 8 9 10" "11 12 13 14 15" "16 17 18 19 20" "21 22 23 24 25"
-	// 6 "1 2 3 4 5 6" "7 8 9 10 11 12" "13 14 15 16 17 18" "19 20 21 22 23 24" "25 26 27 28 29 30" "31 32 33 34 35 36"
+	// "1 2 3" "4 5 6" "7 8 9"
+	// "1 2 3 4" "5 6 7 8" "9 10 11 12" "13 14 15 16"
+	// "1 2 3 4 5" "6 7 8 9 10" "11 12 13 14 15" "16 17 18 19 20" "21 22 23 24 25"
+	// "1 2 3 4 5 6" "7 8 9 10 11 12" "13 14 15 16 17 18" "19 20 21 22 23 24" "25 26 27 28 29 30" "31 32 33 34 35 36"
 	//
-	// program execution will fail if:
-	// - the number of rows is not provided
-	// - the number of rows provided does not match the number of rows provided
-	// - any of the rows provided does not contain the same number of elements as the number of rows provided
+	// program execution will fail if any of the rows provided does not contain the same number of elements as any other row
 	//
 	// for better display of matrix at most two characters are allowed per element
 	// it will work for any number of characters per element, but the matrix will not be displayed properly
 
-	if len(os.Args) < 3 {
-		panic("usage: go run main.go <size (N)> <row1> <row2> ... <rowN>")
+	if len(os.Args) < 2 {
+		panic("usage: go run main.go <row1> <row2> ... <rowN>")
 	}
 
-	size, err := strconv.Atoi(os.Args[1])
-	if err != nil {
-		panic("size should be an integer")
-	}
-
-	if len(os.Args) != size+2 {
-		panic("number of rows provided does not match the number of rows provided")
-	}
-
-	matrix := make([][]string, size)
-	for i, row := range os.Args[2:] {
+	matrix := make([][]string, len(os.Args)-1)
+	for i, row := range os.Args[1:] {
 		// separate each row by space
 		matrix[i] = strings.Split(row, " ")
 
-		if len(matrix[i]) != size {
-			panic("number of elements in row " + strconv.Itoa(i) + " does not match the number of rows provided")
+		if len(matrix[i]) != len(matrix) {
+			panic("number of elements in each row must be the same as the number of rows")
 		}
 	}
 
 	fmt.Printf("Original matrix:\n")
-	printMatrix(matrix)
+	utils.PrintStringMatrix(matrix, 2)
 
 	rotatedMatrix := rotateMatrix(matrix)
 
 	fmt.Printf("\nRotated matrix:\n")
-	printMatrix(rotatedMatrix)
+	utils.PrintStringMatrix(rotatedMatrix, 2)
 
 }
 
@@ -102,18 +90,4 @@ func rotateMatrix(matrix [][]string) [][]string {
 	}
 
 	return matrix
-}
-
-func printMatrix(matrix [][]string) {
-	var sep string
-
-	for _, row := range matrix {
-		for _, c := range row {
-			fmt.Printf("%02s ", c)
-		}
-		sep += "---"
-		fmt.Println()
-	}
-
-	fmt.Println(sep[:len(sep)-1])
 }
