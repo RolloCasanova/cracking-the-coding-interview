@@ -48,7 +48,7 @@ go test -v ./interview_questions/...
 
 ### Progress
 
-#### Chapter 1: Arrays and Strings (8/9)
+#### Chapter 1: Arrays and Strings (9/9)
 
 |  #  | Problem                        | Solution         | Tests         | Solved |
 |-----|--------------------------------|:----------------:|:-------------:|:------:|
@@ -60,8 +60,9 @@ go test -v ./interview_questions/...
 | 1.6 | [String Compression][p1.6]     | [solution][s1.6] | [tests][t1.6] |   ✅   |
 | 1.7 | [Rotate Matrix][p1.7]          | [solution][s1.7] | [tests][t1.7] |   ✅   |
 | 1.8 | [Zero Matrix][p1.8]            | [solution][s1.8] | [tests][t1.8] |   ✅   |
+| 1.9 | [String Rotation][p1.9]        | [solution][s1.9] | [tests][t1.9] |   ✅   |
 
-<!-- References -->
+<!-- References: Chapter 1-->
 [p1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/README.md
 [s1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/main.go
 [t1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/main_test.go
@@ -86,3 +87,6 @@ go test -v ./interview_questions/...
 [p1.8]: interview_questions/1_arrays_and_strings/1.8_zero_matrix/README.md
 [s1.8]: interview_questions/1_arrays_and_strings/1.8_zero_matrix/main.go
 [t1.8]: interview_questions/1_arrays_and_strings/1.8_zero_matrix/main_test.go
+[p1.9]: interview_questions/1_arrays_and_strings/1.9_string_rotation/README.md
+[s1.9]: interview_questions/1_arrays_and_strings/1.9_string_rotation/main.go
+[t1.9]: interview_questions/1_arrays_and_strings/1.9_string_rotation/main_test.go
