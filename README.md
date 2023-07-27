@@ -5,13 +5,13 @@ A collection of solutions for the book "Cracking the coding interview" by Gayle 
 ## How to run
 
 ```bash
-go run ./interview_questions/<chapter>/<exercise>/main.go [optional-params]
+go run <chapter>/<exercise>/main.go [optional-params]
 ```
 
 e.g.
 
 ```bash
-go run interview_questions/1_arrays_and_strings/1.1_is_unique/main.go abcde
+go run 1_arrays_and_strings/1.1_is_unique/main.go abcde
 ```
 
 ## How to test
@@ -19,31 +19,31 @@ go run interview_questions/1_arrays_and_strings/1.1_is_unique/main.go abcde
 ### A single exercise
 
 ```bash
-go test -v ./interview_questions/<chapter>/<exercise>/...
+go test -v ./<chapter>/<exercise>/...
 ```
 
 e.g.
 
 ```bash
-go test -v ./interview_questions/1_arrays_and_strings/1.1_is_unique/...
+go test -v ./1_arrays_and_strings/1.1_is_unique/...
 ```
 
 ### All exercises of a chapter
 
 ``` bash
-go test -v ./interview_questions/<chapter>/...
+go test -v ./<chapter>/...
 ```
 
 e.g.
 
 ``` bash
-go test -v ./interview_questions/1_arrays_and_strings/...
+go test -v ./1_arrays_and_strings/...
 ```
 
 ### All exercises
 
 ```bash
-go test -v ./interview_questions/...
+go test -v ./...
 ```
 
 ### Progress
@@ -63,30 +63,30 @@ go test -v ./interview_questions/...
 | 1.9 | [String Rotation][p1.9]        | [solution][s1.9] | [tests][t1.9] |   ✅   |
 
 <!-- References: Chapter 1-->
-[p1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/README.md
-[s1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/main.go
-[t1.1]: interview_questions/1_arrays_and_strings/1.1_is_unique/main_test.go
-[p1.2]: interview_questions/1_arrays_and_strings/1.2_check_permutation/README.md
-[s1.2]: interview_questions/1_arrays_and_strings/1.2_check_permutation/main.go
-[t1.2]: interview_questions/1_arrays_and_strings/1.2_check_permutation/main_test.go
-[p1.3]: interview_questions/1_arrays_and_strings/1.3_urlify/README.md
-[s1.3]: interview_questions/1_arrays_and_strings/1.3_urlify/main.go
-[t1.3]: interview_questions/1_arrays_and_strings/1.3_urlify/main_test.go
-[p1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/README.md
-[s1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/main.go
-[t1.4]: interview_questions/1_arrays_and_strings/1.4_palindrome_permutation/main_test.go
-[p1.5]: interview_questions/1_arrays_and_strings/1.5_one_away/README.md
-[s1.5]: interview_questions/1_arrays_and_strings/1.5_one_away/main.go
-[t1.5]: interview_questions/1_arrays_and_strings/1.5_one_away/main_test.go
-[p1.6]: interview_questions/1_arrays_and_strings/1.6_string_compression/README.md
-[s1.6]: interview_questions/1_arrays_and_strings/1.6_string_compression/main.go
-[t1.6]: interview_questions/1_arrays_and_strings/1.6_string_compression/main_test.go
-[p1.7]: interview_questions/1_arrays_and_strings/1.7_rotate_matrix/README.md
-[s1.7]: interview_questions/1_arrays_and_strings/1.7_rotate_matrix/main.go
-[t1.7]: interview_questions/1_arrays_and_strings/1.7_rotate_matrix/main_test.go
-[p1.8]: interview_questions/1_arrays_and_strings/1.8_zero_matrix/README.md
-[s1.8]: interview_questions/1_arrays_and_strings/1.8_zero_matrix/main.go
-[t1.8]: interview_questions/1_arrays_and_strings/1.8_zero_matrix/main_test.go
-[p1.9]: interview_questions/1_arrays_and_strings/1.9_string_rotation/README.md
-[s1.9]: interview_questions/1_arrays_and_strings/1.9_string_rotation/main.go
-[t1.9]: interview_questions/1_arrays_and_strings/1.9_string_rotation/main_test.go
+[p1.1]: 1_arrays_and_strings/1.1_is_unique/README.md
+[s1.1]: 1_arrays_and_strings/1.1_is_unique/main.go
+[t1.1]: 1_arrays_and_strings/1.1_is_unique/main_test.go
+[p1.2]: 1_arrays_and_strings/1.2_check_permutation/README.md
+[s1.2]: 1_arrays_and_strings/1.2_check_permutation/main.go
+[t1.2]: 1_arrays_and_strings/1.2_check_permutation/main_test.go
+[p1.3]: 1_arrays_and_strings/1.3_urlify/README.md
+[s1.3]: 1_arrays_and_strings/1.3_urlify/main.go
+[t1.3]: 1_arrays_and_strings/1.3_urlify/main_test.go
+[p1.4]: 1_arrays_and_strings/1.4_palindrome_permutation/README.md
+[s1.4]: 1_arrays_and_strings/1.4_palindrome_permutation/main.go
+[t1.4]: 1_arrays_and_strings/1.4_palindrome_permutation/main_test.go
+[p1.5]: 1_arrays_and_strings/1.5_one_away/README.md
+[s1.5]: 1_arrays_and_strings/1.5_one_away/main.go
+[t1.5]: 1_arrays_and_strings/1.5_one_away/main_test.go
+[p1.6]: 1_arrays_and_strings/1.6_string_compression/README.md
+[s1.6]: 1_arrays_and_strings/1.6_string_compression/main.go
+[t1.6]: 1_arrays_and_strings/1.6_string_compression/main_test.go
+[p1.7]: 1_arrays_and_strings/1.7_rotate_matrix/README.md
+[s1.7]: 1_arrays_and_strings/1.7_rotate_matrix/main.go
+[t1.7]: 1_arrays_and_strings/1.7_rotate_matrix/main_test.go
+[p1.8]: 1_arrays_and_strings/1.8_zero_matrix/README.md
+[s1.8]: 1_arrays_and_strings/1.8_zero_matrix/main.go
+[t1.8]: 1_arrays_and_strings/1.8_zero_matrix/main_test.go
+[p1.9]: 1_arrays_and_strings/1.9_string_rotation/README.md
+[s1.9]: 1_arrays_and_strings/1.9_string_rotation/main.go
+[t1.9]: 1_arrays_and_strings/1.9_string_rotation/main_test.go
