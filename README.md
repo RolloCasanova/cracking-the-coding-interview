@@ -90,3 +90,45 @@ go test -v ./...
 [p1.9]: 1_arrays_and_strings/1.9_string_rotation/README.md
 [s1.9]: 1_arrays_and_strings/1.9_string_rotation/main.go
 [t1.9]: 1_arrays_and_strings/1.9_string_rotation/main_test.go
+
+#### Chapter 2: Linked Lists (1/8)
+
+|  #  | Problem                    | Solution         | Tests         | Solved |
+|-----|----------------------------|:----------------:|:-------------:|:------:|
+| 2.1 | [Remove Dups][p2.1]        | [solution][s2.1] | [tests][t2.1] |   ✅   |
+<!--
+| 2.2 | [Return Kth to Last][p2.2] | [solution][s2.2] | [tests][t2.2] |   ✅   |
+| 2.3 | [Delete Middle Node][p2.3] | [solution][s2.3] | [tests][t2.3] |   ✅   |
+| 2.4 | [Partition][p2.4]          | [solution][s2.4] | [tests][t2.4] |   ✅   |
+| 2.5 | [Sum Lists][p2.5]          | [solution][s2.5] | [tests][t2.5] |   ✅   |
+| 2.6 | [Palindrome][p2.6]         | [solution][s2.6] | [tests][t2.6] |   ✅   |
+| 2.7 | [Intersection][p2.7]       | [solution][s2.7] | [tests][t2.7] |   ✅   |
+| 2.8 | [Loop Detection][p2.8]     | [solution][s2.8] | [tests][t2.8] |   ✅   | -->
+
+<!-- References: Chapter 2 -->
+[p2.1]: 2_linked_lists/2.1_remove_dups/README.md
+[s2.1]: 2_linked_lists/2.1_remove_dups/main.go
+[t2.1]: 2_linked_lists/2.1_remove_dups/main_test.go
+<!--
+[p2.2]: 2_linked_lists/2.2_return_kth_to_last/README.md
+[s2.2]: 2_linked_lists/2.2_return_kth_to_last/main.go
+[t2.2]: 2_linked_lists/2.2_return_kth_to_last/main_test.go
+[p2.3]: 2_linked_lists/2.3_delete_middle_node/README.md
+[s2.3]: 2_linked_lists/2.3_delete_middle_node/main.go
+[t2.3]: 2_linked_lists/2.3_delete_middle_node/main_test.go
+[p2.4]: 2_linked_lists/2.4_partition/README.md
+[s2.4]: 2_linked_lists/2.4_partition/main.go
+[t2.4]: 2_linked_lists/2.4_partition/main_test.go
+[p2.5]: 2_linked_lists/2.5_sum_lists/README.md
+[s2.5]: 2_linked_lists/2.5_sum_lists/main.go
+[t2.5]: 2_linked_lists/2.5_sum_lists/main_test.go
+[p2.6]: 2_linked_lists/2.6_palindrome/README.md
+[s2.6]: 2_linked_lists/2.6_palindrome/main.go
+[t2.6]: 2_linked_lists/2.6_palindrome/main_test.go
+[p2.7]: 2_linked_lists/2.7_intersection/README.md
+[s2.7]: 2_linked_lists/2.7_intersection/main.go
+[t2.7]: 2_linked_lists/2.7_intersection/main_test.go
+[p2.8]: 2_linked_lists/2.8_loop_detection/README.md
+[s2.8]: 2_linked_lists/2.8_loop_detection/main.go
+[t2.8]: 2_linked_lists/2.8_loop_detection/main_test.go
+-->
