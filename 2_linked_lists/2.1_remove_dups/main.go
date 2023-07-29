@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		panic("usage: go run main.go <val1> <val2> ... <valN>")
+		panic("usage: go run main.go <nodes...>")
 	}
 
 	ll := utils.ArrayToLinkedList(os.Args[1:])
@@ -18,10 +18,12 @@ func main() {
 	utils.PrintLinkedList(ll)
 
 	fmt.Println("Linked list with duplicates remove (map approach): ")
-	utils.PrintLinkedList(removeDupsWithMap(ll))
+	removeDupsWithMap(ll)
+	utils.PrintLinkedList(ll)
 
 	fmt.Println("Linked list with duplicates remove (double pointer approach): ")
-	utils.PrintLinkedList(removeDupsWithDoublePointer(ll))
+	removeDupsWithDoublePointer(ll)
+	utils.PrintLinkedList(ll)
 }
 
 func removeDupsWithMap(ll *utils.Node) *utils.Node {

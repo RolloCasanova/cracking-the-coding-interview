@@ -91,13 +91,13 @@ go test -v ./...
 [s1.9]: 1_arrays_and_strings/1.9_string_rotation/main.go
 [t1.9]: 1_arrays_and_strings/1.9_string_rotation/main_test.go
 
-#### Chapter 2: Linked Lists (1/8)
+#### Chapter 2: Linked Lists (2/8)
 
 |  #  | Problem                    | Solution         | Tests         | Solved |
 |-----|----------------------------|:----------------:|:-------------:|:------:|
 | 2.1 | [Remove Dups][p2.1]        | [solution][s2.1] | [tests][t2.1] |   ✅   |
-<!--
 | 2.2 | [Return Kth to Last][p2.2] | [solution][s2.2] | [tests][t2.2] |   ✅   |
+<!--
 | 2.3 | [Delete Middle Node][p2.3] | [solution][s2.3] | [tests][t2.3] |   ✅   |
 | 2.4 | [Partition][p2.4]          | [solution][s2.4] | [tests][t2.4] |   ✅   |
 | 2.5 | [Sum Lists][p2.5]          | [solution][s2.5] | [tests][t2.5] |   ✅   |
@@ -109,10 +109,10 @@ go test -v ./...
 [p2.1]: 2_linked_lists/2.1_remove_dups/README.md
 [s2.1]: 2_linked_lists/2.1_remove_dups/main.go
 [t2.1]: 2_linked_lists/2.1_remove_dups/main_test.go
-<!--
 [p2.2]: 2_linked_lists/2.2_return_kth_to_last/README.md
 [s2.2]: 2_linked_lists/2.2_return_kth_to_last/main.go
 [t2.2]: 2_linked_lists/2.2_return_kth_to_last/main_test.go
+<!--
 [p2.3]: 2_linked_lists/2.3_delete_middle_node/README.md
 [s2.3]: 2_linked_lists/2.3_delete_middle_node/main.go
 [t2.3]: 2_linked_lists/2.3_delete_middle_node/main_test.go
