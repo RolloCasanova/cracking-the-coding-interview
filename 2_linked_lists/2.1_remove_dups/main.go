@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/RolloCasanova/cracking-the-coding-interview/2_linked_lists/utils"
@@ -14,16 +13,13 @@ func main() {
 
 	ll := utils.ArrayToLinkedList(os.Args[1:])
 
-	fmt.Println("Original linked list: ")
-	utils.PrintLinkedList(ll)
+	ll.Print("Original linked list: ")
 
-	fmt.Println("Linked list with duplicates remove (map approach): ")
 	removeDupsWithMap(ll)
-	utils.PrintLinkedList(ll)
+	ll.Print("Linked list with duplicates remove (map approach): ")
 
-	fmt.Println("Linked list with duplicates remove (double pointer approach): ")
 	removeDupsWithDoublePointer(ll)
-	utils.PrintLinkedList(ll)
+	ll.Print("Linked list with duplicates remove (double pointer approach): ")
 }
 
 func removeDupsWithMap(ll *utils.Node) *utils.Node {

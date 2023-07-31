@@ -27,7 +27,11 @@ func ArrayToLinkedList(values []string) *Node {
 	return root
 }
 
-func PrintLinkedList(ll *Node) {
+func (ll *Node) Print(header string) {
+	if header != "" {
+		fmt.Println(header)
+	}
+
 	for ll != nil {
 		fmt.Print(ll.Value, " -> ")
 		ll = ll.Next

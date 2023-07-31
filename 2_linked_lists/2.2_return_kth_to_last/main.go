@@ -20,8 +20,7 @@ func main() {
 
 	ll := utils.ArrayToLinkedList(os.Args[2:])
 
-	fmt.Println("Linked list: ")
-	utils.PrintLinkedList(ll)
+	ll.Print("Linked list: ")
 
 	fmt.Printf("K: %d\n\n", k)
 
