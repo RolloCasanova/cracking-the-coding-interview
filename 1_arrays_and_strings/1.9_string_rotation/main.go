@@ -17,6 +17,7 @@ func main() {
 	}
 }
 
+// stringRotation checks if s2 is a rotation of s1
 func stringRotation(s1, s2 string) bool {
 	// if s1 and s2 are not the same length, then s2 cannot be a rotation of s1
 	if len(s1) != len(s2) {

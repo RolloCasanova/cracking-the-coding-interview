@@ -2,32 +2,40 @@ package utils
 
 import "fmt"
 
-type Node struct {
-	Value string
-	Next  *Node
+type NodeVal interface {
+	~int | ~string
 }
 
-func NewNode(v string) *Node {
-	return &Node{Value: v}
+type Node[T NodeVal] struct {
+	Value T
+	Next  *Node[T]
 }
 
-func ArrayToLinkedList(values []string) *Node {
+func NewNode[T NodeVal](v T) *Node[T] {
+	return &Node[T]{Value: v}
+}
+
+// create a linked list from an array of T (int or string)
+func ArrayToLinkedList[T NodeVal](values []T) *Node[T] {
 	if len(values) == 0 {
 		return nil
 	}
 
-	root := NewNode(values[0])
+	root := &Node[T]{
+		Value: values[0],
+	}
+
 	ll := root
 
 	for i := 1; i < len(values); i++ {
-		ll.Next = NewNode(values[i])
+		ll.Next = NewNode[T](values[i])
 		ll = ll.Next
 	}
 
 	return root
 }
 
-func (ll *Node) Print(header string) {
+func (ll *Node[T]) Print(header string) {
 	if header != "" {
 		fmt.Println(header)
 	}
@@ -36,5 +44,6 @@ func (ll *Node) Print(header string) {
 		fmt.Print(ll.Value, " -> ")
 		ll = ll.Next
 	}
+
 	fmt.Print("nil\n\n")
 }

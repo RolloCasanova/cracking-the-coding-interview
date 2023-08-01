@@ -22,6 +22,8 @@ func main() {
 	fmt.Printf("True length: %d\nOriginal string: \"%s\"\nURLified string: \"%s\"\n", trueLength, s, urldString)
 }
 
+// urlify replaces all spaces in a string with '%20' and returns the new string
+// trueLength is the length of the string without trailing spaces
 func urlify(s string, trueLength int) string {
 	var urldString strings.Builder
 

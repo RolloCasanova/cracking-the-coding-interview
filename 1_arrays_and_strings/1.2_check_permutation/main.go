@@ -22,6 +22,7 @@ func main() {
 	}
 }
 
+// isPermutation checks if two strings are permutations one of another
 func isPermutation(s1, s2 string) (bool, error) {
 	if len(s1) != len(s2) {
 		return false, errors.New("different lenght strings cannot be permutations one of another")

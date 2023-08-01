@@ -44,6 +44,7 @@ func main() {
 	utils.PrintStringMatrix(zeroedMatrix, 1)
 }
 
+// zeroMatrix zeroes all rows and columns in a matrix that contain a "0"; this is done in place
 func zeroMatrix(matrix [][]string) [][]string {
 	// using 0th row and 0th column to indicate if the column contain a "0" in the matrix
 	var firstRowHasZero, firstColHasZero bool

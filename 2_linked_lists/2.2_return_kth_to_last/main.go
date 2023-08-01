@@ -8,6 +8,8 @@ import (
 	"github.com/RolloCasanova/cracking-the-coding-interview/2_linked_lists/utils"
 )
 
+type node = utils.Node[string]
+
 func main() {
 	if len(os.Args) < 3 {
 		panic("usage: main.go <k> <nodes...>")
@@ -18,7 +20,7 @@ func main() {
 		panic("k must be a number")
 	}
 
-	ll := utils.ArrayToLinkedList(os.Args[2:])
+	ll := utils.ArrayToLinkedList[string](os.Args[2:])
 
 	ll.Print("Linked list: ")
 
@@ -33,7 +35,8 @@ func main() {
 
 }
 
-func returnKthToLast(ll *utils.Node, k int) (string, error) {
+// returnKthToLast returns the kth to last element of a linked list
+func returnKthToLast(ll *node, k int) (string, error) {
 	if ll == nil {
 		return "", fmt.Errorf("linked list is nil")
 	}

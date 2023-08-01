@@ -48,6 +48,8 @@ func main() {
 
 }
 
+// rotateMatrix rotates a matrix of strings 90 degrees clockwise
+// it does not return a new matrix, it rotates the matrix in place
 func rotateMatrix(matrix [][]string) [][]string {
 	if len(matrix) <= 1 {
 		return matrix

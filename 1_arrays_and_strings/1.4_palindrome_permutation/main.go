@@ -20,6 +20,7 @@ func main() {
 	}
 }
 
+// isPalindromePermutation checks if a string is a permutation of a palindrome
 func isPalindromePermutation(s string) bool {
 	// vector will hold the parity of the characters (0 means is even, 1 means is odd)
 	// least significant bit represents 'a' (a=1, b=2 ... z=26)

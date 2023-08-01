@@ -6,12 +6,14 @@ import (
 	"github.com/RolloCasanova/cracking-the-coding-interview/2_linked_lists/utils"
 )
 
+type node = utils.Node[string]
+
 func main() {
 	if len(os.Args) < 2 {
 		panic("usage: go run main.go <nodes...>")
 	}
 
-	ll := utils.ArrayToLinkedList(os.Args[1:])
+	ll := utils.ArrayToLinkedList[string](os.Args[1:])
 
 	ll.Print("Original linked list: ")
 
@@ -22,7 +24,8 @@ func main() {
 	ll.Print("Linked list with duplicates remove (double pointer approach): ")
 }
 
-func removeDupsWithMap(ll *utils.Node) *utils.Node {
+// removeDupsWithMap removes duplicates from a linked list using a map approach
+func removeDupsWithMap(ll *node) *node {
 	if ll == nil {
 		return nil
 	}
@@ -43,7 +46,8 @@ func removeDupsWithMap(ll *utils.Node) *utils.Node {
 	return root
 }
 
-func removeDupsWithDoublePointer(ll *utils.Node) *utils.Node {
+// removeDupsWithDoublePointer removes duplicates from a linked list using a double pointer approach
+func removeDupsWithDoublePointer(ll *node) *node {
 	if ll == nil {
 		return nil
 	}

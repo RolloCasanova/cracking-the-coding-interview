@@ -22,6 +22,7 @@ func main() {
 	}
 }
 
+// isUnique checks if a string contains only unique characters
 func isUnique(s string) (bool, error) {
 	// impossible for a string to contain more than 26 characters
 	if len(s) > 26 {
@@ -35,13 +36,13 @@ func isUnique(s string) (bool, error) {
 	for _, c := range s {
 		pos := c - 'a' // this will result in a value from 0 to 25
 
-		if bitMap & (1<<pos) != 0 {
+		if bitMap&(1<<pos) != 0 {
 			// if bit is already set then character is not unique
 			return false, fmt.Errorf("character '%c' is not unique", c)
 		}
 
 		// append character to bitmap
-		bitMap = bitMap | (1<<pos)
+		bitMap = bitMap | (1 << pos)
 	}
 
 	return true, nil

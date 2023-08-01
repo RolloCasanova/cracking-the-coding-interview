@@ -20,6 +20,8 @@ func main() {
 	}
 }
 
+// oneAway checks if two strings are at most one edit away from each other
+// an edit is defined as an insertion, deletion or replacement of a character
 func oneAway(s1, s2 string) bool {
 	l1, l2 := len(s1), len(s2)
 

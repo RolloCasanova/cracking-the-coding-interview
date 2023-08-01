@@ -18,6 +18,8 @@ func main() {
 	fmt.Printf("  Original: %s\nCompressed: %s\n", s, compressed)
 }
 
+// stringCompression compresses a string using the counts of repeated characters
+// if the compressed string is not smaller than the original string, it returns the original string
 func stringCompression(s string) string {
 	// safe check for empty strings
 	if len(s) == 0 {
