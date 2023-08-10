@@ -28,9 +28,7 @@ func Test_deleteMiddleNode(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(_ *testing.T) {
-			ll.Print("Linked list: ")
 			deleteMiddleNode(tt.args.node)
-			ll.Print("Linked list with middle node deleted: ")
 		})
 	}
 }

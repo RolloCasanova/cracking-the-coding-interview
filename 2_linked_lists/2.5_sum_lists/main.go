@@ -135,9 +135,9 @@ func sumListForward(ll1, ll2 *node) *node {
 
 	// if one of the linked lists is shorter than the other, pad it with 0s
 	if len1 < len2 {
-		ll1.PadLinkedList(len2 - len1)
+		ll1 = ll1.PadLinkedList(len2 - len1)
 	} else if len2 < len1 {
-		ll2.PadLinkedList(len1 - len2)
+		ll2 = ll2.PadLinkedList(len1 - len2)
 	}
 
 	// must sum the two linked lists in reverse order
