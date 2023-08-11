@@ -126,3 +126,52 @@ func CreateIntersectingLists[T NodeVal](ll1, ll2, ll3 *Node[T]) (*Node[T], *Node
 
 	return root1, root2
 }
+
+// CreateLoop creates a loop in the linked list at the node with the value v
+// it panics if v is not in the linked list
+func (ll *Node[T]) CreateLoop(v T) *Node[T] {
+	// find the node with value v
+	var node *Node[T]
+	for ll != nil {
+		if ll.Value == v {
+			node = ll
+			break
+		}
+
+		ll = ll.Next
+	}
+
+	if node == nil {
+		panic(fmt.Sprintf("node with value %v not found", v))
+	}
+
+	// connect last node of ll to the node with value v
+	for ll.Next != nil {
+		ll = ll.Next
+	}
+
+	ll.Next = node
+
+	return node
+}
+
+// PrintLoop prints the linked list with a given header (optional) that contains a loop
+// it also prints the arrows and nil at the end for readability
+func (ll *Node[T]) PrintLoop(header string) {
+	if header != "" {
+		fmt.Println(header)
+	}
+
+	seen := make(map[*Node[T]]bool)
+
+	for ll != nil {
+		if seen[ll] {
+			fmt.Printf("%v\n\n", ll.Value)
+			return
+		}
+
+		seen[ll] = true
+		fmt.Print(ll.Value, " -> ")
+		ll = ll.Next
+	}
+}
