@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/RolloCasanova/cracking-the-coding-interview/2_linked_lists/utils"
+	"github.com/RolloCasanova/ctci-go/2_linked_lists/utils"
 )
 
 func auxGenerateCircularLinkedList(v []string, loopNodeVal string) (*node, *node) {

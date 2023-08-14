@@ -1,3 +1,3 @@
-module github.com/RolloCasanova/cracking-the-coding-interview
+module github.com/RolloCasanova/ctci-go
 
-go 1.20
+go 1.21.0

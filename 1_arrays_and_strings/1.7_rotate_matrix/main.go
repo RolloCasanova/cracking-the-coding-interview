@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/RolloCasanova/cracking-the-coding-interview/1_arrays_and_strings/utils"
+	"github.com/RolloCasanova/ctci-go/1_arrays_and_strings/utils"
 )
 
 func main() {

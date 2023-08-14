@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/RolloCasanova/cracking-the-coding-interview/2_linked_lists/utils"
+	"github.com/RolloCasanova/ctci-go/2_linked_lists/utils"
 )
 
 type node = utils.Node[string]
