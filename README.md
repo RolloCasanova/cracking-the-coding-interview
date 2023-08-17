@@ -102,8 +102,7 @@ go test -v ./...
 | 2.5 | [Sum Lists][p2.5]          | [solution][s2.5] | [tests][t2.5] |   ✅   |
 | 2.6 | [Palindrome][p2.6]         | [solution][s2.6] | [tests][t2.6] |   ✅   |
 | 2.7 | [Intersection][p2.7]       | [solution][s2.7] | [tests][t2.7] |   ✅   |
-| 2.8 | [Loop Detection][p2.8]     | [solution][s2.8] | [tests][t2.8] |   ✅   | -->
-<!--
+| 2.8 | [Loop Detection][p2.8]     | [solution][s2.8] | [tests][t2.8] |   ✅   |
 
 <!-- References: Chapter 2 -->
 [p2.1]: 2_linked_lists/2.1_remove_dups/README.md
@@ -130,5 +129,38 @@ go test -v ./...
 [p2.8]: 2_linked_lists/2.8_loop_detection/README.md
 [s2.8]: 2_linked_lists/2.8_loop_detection/main.go
 [t2.8]: 2_linked_lists/2.8_loop_detection/main_test.go
+
+#### Chapter 3: Stacks and Queues (1/6)
+
+|  #  | Problem                  | Solution         | Tests         | Solved |
+|-----|--------------------------|:----------------:|:-------------:|:------:|
+| 3.1 | [Three in One][p3.1]     | [solution][s3.1] | [tests][t3.1] |   ✅   |
 <!--
+| 3.2 | [Stack Min][p3.2]        | [solution][s3.2] | [tests][t3.2] |        |
+| 3.3 | [Stack of Plates][p3.3]  | [solution][s3.3] | [tests][t3.3] |        |
+| 3.4 | [Queue via Stacks][p3.4] | [solution][s3.4] | [tests][t3.4] |        |
+| 3.5 | [Sort Stack][p3.5]       | [solution][s3.5] | [tests][t3.5] |        |
+| 3.6 | [Animal Shelter][p3.6]   | [solution][s3.6] | [tests][t3.6] |        |
+ -->
+
+<!-- References: Chapter 3 -->
+[p3.1]: 3_stacks_and_queues/3.1_three_in_one/README.md
+[s3.1]: 3_stacks_and_queues/3.1_three_in_one/main.go
+[t3.1]: 3_stacks_and_queues/3.1_three_in_one/main_test.go
+<!--
+[p3.2]: 3_stacks_and_queues/3.2_stack_min/README.md
+[s3.2]: 3_stacks_and_queues/3.2_stack_min/main.go
+[t3.2]: 3_stacks_and_queues/3.2_stack_min/main_test.go
+[p3.3]: 3_stacks_and_queues/3.3_stack_of_plates/README.md
+[s3.3]: 3_stacks_and_queues/3.3_stack_of_plates/main.go
+[t3.3]: 3_stacks_and_queues/3.3_stack_of_plates/main_test.go
+[p3.4]: 3_stacks_and_queues/3.4_queue_via_stacks/README.md
+[s3.4]: 3_stacks_and_queues/3.4_queue_via_stacks/main.go
+[t3.4]: 3_stacks_and_queues/3.4_queue_via_stacks/main_test.go
+[p3.5]: 3_stacks_and_queues/3.5_sort_stack/README.md
+[s3.5]: 3_stacks_and_queues/3.5_sort_stack/main.go
+[t3.5]: 3_stacks_and_queues/3.5_sort_stack/main_test.go
+[p3.6]: 3_stacks_and_queues/3.6_animal_shelter/README.md
+[s3.6]: 3_stacks_and_queues/3.6_animal_shelter/main.go
+[t3.6]: 3_stacks_and_queues/3.6_animal_shelter/main_test.go
 -->
