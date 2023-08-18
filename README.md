@@ -135,22 +135,22 @@ go test -v ./...
 |  #  | Problem                  | Solution         | Tests         | Solved |
 |-----|--------------------------|:----------------:|:-------------:|:------:|
 | 3.1 | [Three in One][p3.1]     | [solution][s3.1] | [tests][t3.1] |   ✅   |
+| 3.2 | [Stack Min][p3.2]        | [solution][s3.2] | [tests][t3.2] |   ✅   |
 <!--
-| 3.2 | [Stack Min][p3.2]        | [solution][s3.2] | [tests][t3.2] |        |
-| 3.3 | [Stack of Plates][p3.3]  | [solution][s3.3] | [tests][t3.3] |        |
-| 3.4 | [Queue via Stacks][p3.4] | [solution][s3.4] | [tests][t3.4] |        |
-| 3.5 | [Sort Stack][p3.5]       | [solution][s3.5] | [tests][t3.5] |        |
-| 3.6 | [Animal Shelter][p3.6]   | [solution][s3.6] | [tests][t3.6] |        |
+| 3.3 | [Stack of Plates][p3.3]  | [solution][s3.3] | [tests][t3.3] |   ✅   |
+| 3.4 | [Queue via Stacks][p3.4] | [solution][s3.4] | [tests][t3.4] |   ✅   |
+| 3.5 | [Sort Stack][p3.5]       | [solution][s3.5] | [tests][t3.5] |   ✅   |
+| 3.6 | [Animal Shelter][p3.6]   | [solution][s3.6] | [tests][t3.6] |   ✅   |
  -->
 
 <!-- References: Chapter 3 -->
 [p3.1]: 3_stacks_and_queues/3.1_three_in_one/README.md
 [s3.1]: 3_stacks_and_queues/3.1_three_in_one/main.go
 [t3.1]: 3_stacks_and_queues/3.1_three_in_one/main_test.go
-<!--
 [p3.2]: 3_stacks_and_queues/3.2_stack_min/README.md
 [s3.2]: 3_stacks_and_queues/3.2_stack_min/main.go
 [t3.2]: 3_stacks_and_queues/3.2_stack_min/main_test.go
+<!--
 [p3.3]: 3_stacks_and_queues/3.3_stack_of_plates/README.md
 [s3.3]: 3_stacks_and_queues/3.3_stack_of_plates/main.go
 [t3.3]: 3_stacks_and_queues/3.3_stack_of_plates/main_test.go
