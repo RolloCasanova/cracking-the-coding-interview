@@ -8,7 +8,7 @@ import (
 
 func TestStackMin(t *testing.T) {
 	type args struct {
-		sm stackMinType
+		sm utils.StackMin
 	}
 	tests := []struct {
 		name string

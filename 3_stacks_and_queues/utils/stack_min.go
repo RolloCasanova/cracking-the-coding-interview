@@ -4,8 +4,6 @@ import (
 	"fmt"
 )
 
-type StackMinType = *stackMin
-
 // StackMin is an interface for a stack that can return the minimum value
 type StackMin interface {
 	Stack[int]
@@ -51,7 +49,10 @@ func (sm *stackMin) Push(value int) {
 // Pop removes the top value of the stack and returns it
 func (sm *stackMin) Pop() int {
 	if sm.IsEmpty() {
-		panic("empty stack")
+		// gracefully handle stack underflow
+		fmt.Println("empty stack")
+
+		return 0
 	}
 
 	value := sm.values[len(sm.values)-1].value
@@ -63,7 +64,10 @@ func (sm *stackMin) Pop() int {
 // Peek returns the top value of the stack without removing it
 func (sm *stackMin) Peek() int {
 	if sm.IsEmpty() {
-		panic("empty stack")
+		// gracefully handle stack underflow
+		fmt.Println("empty stack")
+
+		return 0
 	}
 
 	return sm.values[len(sm.values)-1].value
@@ -74,27 +78,38 @@ func (sm *stackMin) IsEmpty() bool {
 	return len(sm.values) == 0
 }
 
-// Peek returns the top value of the stack in O(1) time without removing it
-func (sm *stackMin) Min() int {
-	if sm.IsEmpty() {
-		panic("empty stack")
-	}
-
-	return sm.values[len(sm.values)-1].min
+// IsFull returns true if the stack is full, false otherwise
+func (sm *stackMin) IsFull(capacity int) bool {
+	return len(sm.values) == capacity
 }
 
 // Print prints the stack values
-func (sm *stackMin) Print() {
+func (sm *stackMin) Print(header string) {
 	if sm.IsEmpty() {
-		fmt.Println("empty stack")
+		// gracefully handle stack underflow
+		fmt.Println(header, "\nempty stack")
 
 		return
 	}
 
-	fmt.Print("stack values: ")
+	if header != "" {
+		fmt.Println(header)
+	}
+
 	for _, v := range sm.values {
 		fmt.Print(v.value, " ")
 	}
 	fmt.Println()
+}
 
+// Peek returns the top value of the stack in O(1) time without removing it
+func (sm *stackMin) Min() int {
+	if sm.IsEmpty() {
+		// gracefully handle stack underflow
+		fmt.Println("empty stack")
+
+		return 0
+	}
+
+	return sm.values[len(sm.values)-1].min
 }

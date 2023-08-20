@@ -13,6 +13,8 @@ type Stack[T StackValue] interface {
 	Pop() T
 	Peek() T
 	IsEmpty() bool
+	IsFull(int) bool
+	Print(header string)
 }
 
 // stack represents a stack data structure implemented with an array
@@ -20,20 +22,19 @@ type stack[T StackValue] struct {
 	values []T
 }
 
-// stackWithMin represents a stack data structure implemented with an array that contains a return the minimum value
-
 // NewStack returns a new stack with the given capacity
-func NewStack[T StackValue](capacity int) Stack[T] {
-	return stack[T]{
+func NewStack[T StackValue](capacity int) *stack[T] {
+	return &stack[T]{
 		values: make([]T, 0, capacity),
 	}
 }
 
 // Push adds a value to the top of the stack
-func (s stack[T]) Push(value T) {
+func (s *stack[T]) Push(value T) {
 	if len(s.values) == cap(s.values) {
 		// gracefully handle stack overflow
 		fmt.Println("stack overflow")
+
 		return
 	}
 
@@ -41,10 +42,11 @@ func (s stack[T]) Push(value T) {
 }
 
 // Pop returns the top value of the stack by removing it
-func (s stack[T]) Pop() (value T) {
+func (s *stack[T]) Pop() (value T) {
 	if len(s.values) == 0 {
 		// gracefully handle stack underflow
 		fmt.Println("empty stack")
+
 		return
 	}
 
@@ -55,10 +57,11 @@ func (s stack[T]) Pop() (value T) {
 }
 
 // Peek returns the top value of the stack without removing it
-func (s stack[T]) Peek() (value T) {
+func (s *stack[T]) Peek() (value T) {
 	if len(s.values) == 0 {
 		// gracefully handle stack underflow
 		fmt.Println("empty stack")
+
 		return
 	}
 
@@ -66,6 +69,30 @@ func (s stack[T]) Peek() (value T) {
 }
 
 // IsEmpty returns whether the stack is empty or not
-func (s stack[T]) IsEmpty() bool {
+func (s *stack[T]) IsEmpty() bool {
 	return len(s.values) == 0
+}
+
+// IsFull returns whether the stack is full or not
+func (s *stack[T]) IsFull(capacity int) bool {
+	return len(s.values) == capacity
+}
+
+// Print prints the stack values
+func (s *stack[T]) Print(header string) {
+	if s.IsEmpty() {
+		fmt.Println(header, "\nempty stack")
+
+		return
+	}
+
+	if header != "" {
+		fmt.Println(header)
+	}
+
+	for _, v := range s.values {
+		fmt.Print(v, " ")
+	}
+
+	fmt.Println()
 }

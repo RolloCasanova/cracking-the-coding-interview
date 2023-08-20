@@ -8,9 +8,6 @@ import (
 	"github.com/RolloCasanova/ctci-go/3_stacks_and_queues/utils"
 )
 
-// hack to get and use the type of the stackMin struct
-type stackMinType = utils.StackMinType
-
 func main() {
 	if len(os.Args) < 2 {
 		panic("usage: go run main.go <stack values...>")
@@ -29,11 +26,11 @@ func main() {
 	}
 
 	// return the minimum value in the stack in O(1) time
-	sm.Print()
+	sm.Print("stack: ")
 	fmt.Println("minumum value:", StackMin(sm))
 }
 
 // StackMin returns the minimum value in the stack in O(1) time
-func StackMin(sm stackMinType) int {
+func StackMin(sm utils.StackMin) int {
 	return sm.Min()
 }
