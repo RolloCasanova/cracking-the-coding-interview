@@ -11,13 +11,13 @@ type StackSet interface {
 
 // stackSet represents a set of stacks
 type stackSet struct {
-	stacks    []Stack[int]
+	stacks    []*stack[int]
 	stackSize int
 }
 
 // NewStackSet returns a new stack set
-func NewStackSet(stackSize, numStacks int) StackSet {
-	stacks := make([]Stack[int], numStacks)
+func NewStackSet(stackSize, numStacks int) *stackSet {
+	stacks := make([]*stack[int], numStacks)
 
 	for i := 0; i < numStacks; i++ {
 		stacks[i] = NewStack[int](stackSize)
@@ -129,6 +129,11 @@ func (ss *stackSet) Print(header string) {
 	}
 }
 
+// Size returns the size of the stack set
+func (ss *stackSet) Size() int {
+	return ss.stackSize
+}
+
 // PopAt removes the top value of the stack at the given index and returns it
 func (ss *stackSet) PopAt(index int) (value int, err error) {
 	if index < 0 || index >= len(ss.stacks) {
@@ -140,9 +145,4 @@ func (ss *stackSet) PopAt(index int) (value int, err error) {
 	}
 
 	return ss.stacks[index].Pop(), nil
-}
-
-// Size returns the size of the stack set
-func (ss *stackSet) Size() int {
-	return ss.stackSize
 }

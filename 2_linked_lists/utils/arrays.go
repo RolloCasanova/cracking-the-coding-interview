@@ -6,6 +6,10 @@ import (
 )
 
 func StringArrayToIntArray(strs []string) ([]int, error) {
+	if strs == nil {
+		return nil, fmt.Errorf("string array is nil: unable to convert to int array")
+	}
+
 	ints := make([]int, len(strs))
 
 	for i, str := range strs {

@@ -87,8 +87,8 @@ func (ll *Node[T]) Reverse() *Node[T] {
 	return prev
 }
 
-// String returns a string representation of the linked list (e.g. 1 -> 2 -> 3 -> nil is "123")
-func (ll *Node[T]) String() string {
+// Flat returns a string representation of the linked list (e.g. 1 -> 2 -> 3 -> nil is "123")
+func (ll *Node[T]) Flat() string {
 	var s string
 
 	for ll != nil {
@@ -111,6 +111,10 @@ func (ll *Node[T]) String() string {
 // ll1: 1 -> 2 -> 3 -> 9 -> nil
 // ll2: 4 -> 5 -> 9 -> nil
 func CreateIntersectingLists[T NodeVal](ll1, ll2, ll3 *Node[T]) (*Node[T], *Node[T]) {
+	if ll1 == nil || ll2 == nil || ll3 == nil {
+		return ll1, ll2
+	}
+
 	root1, root2 := ll1, ll2
 
 	for ll1.Next != nil {
@@ -142,7 +146,10 @@ func (ll *Node[T]) CreateLoop(v T) *Node[T] {
 	}
 
 	if node == nil {
-		panic(fmt.Sprintf("node with value %v not found", v))
+		// gracefully handle the case where v is not in the linked list
+		fmt.Printf("node with value %v not found\n", v)
+
+		return nil
 	}
 
 	// connect last node of ll to the node with value v
@@ -158,6 +165,12 @@ func (ll *Node[T]) CreateLoop(v T) *Node[T] {
 // PrintLoop prints the linked list with a given header (optional) that contains a loop
 // it also prints the arrows and nil at the end for readability
 func (ll *Node[T]) PrintLoop(header string) {
+	if ll.Len() == 0 {
+		// gracefully handle the case where ll is nil
+		fmt.Println("nil")
+
+		return
+	}
 	if header != "" {
 		fmt.Println(header)
 	}

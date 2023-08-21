@@ -44,7 +44,7 @@ func main() {
 
 // isPalindromeReverse checks if a linked list is a palindrome by reversing it and comparing it to the original
 func isPalindromeReverse(ll *node) bool {
-	return ll.String() == ll.Reverse().String()
+	return ll.Flat() == ll.Reverse().Flat()
 }
 
 // isPalindromeStack checks if a linked list is a palindrome by using a stack
