@@ -317,7 +317,7 @@ func TestPop_Int(t *testing.T) {
 	}
 }
 
-func TestPeek_String(t *testing.T) {
+func TestPeekStack_String(t *testing.T) {
 	tests := []struct {
 		name  string
 		stack *stack[string]
@@ -365,7 +365,7 @@ func TestPeek_String(t *testing.T) {
 	}
 }
 
-func TestPeek_Int(t *testing.T) {
+func TestPeekStack_Int(t *testing.T) {
 	tests := []struct {
 		name  string
 		stack *stack[int]
@@ -593,6 +593,126 @@ func TestPrint_String(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(_ *testing.T) {
 			tt.stack.Print(tt.header)
+		})
+	}
+}
+
+func TestLen_String(t *testing.T) {
+	type fields struct {
+		s *stack[string]
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		want   int
+	}{
+		{
+			name: "nil stack should return 0",
+			fields: fields{
+				s: nil,
+			},
+			want: 0,
+		},
+		{
+			name: "empty stack should return 0",
+			fields: fields{
+				s: NewStack[string](3),
+			},
+			want: 0,
+		},
+		{
+			name: "non-empty stack should return correct length",
+			fields: fields{
+				s: func() *stack[string] {
+					s := NewStack[string](3)
+					s.Push("A")
+
+					return s
+				}(),
+			},
+			want: 1,
+		},
+		{
+			name: "full stack should return correct length",
+			fields: fields{
+				s: func() *stack[string] {
+					s := NewStack[string](3)
+					s.Push("A")
+					s.Push("B")
+					s.Push("C")
+
+					return s
+				}(),
+			},
+			want: 3,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := tt.fields.s.Len(); got != tt.want {
+				t.Errorf("Len() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestLen_Int(t *testing.T) {
+	type fields struct {
+		s *stack[int]
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		want   int
+	}{
+		{
+			name: "nil stack should return 0",
+			fields: fields{
+				s: nil,
+			},
+			want: 0,
+		},
+		{
+			name: "empty stack should return 0",
+			fields: fields{
+				s: NewStack[int](3),
+			},
+			want: 0,
+		},
+		{
+			name: "non-empty stack should return correct length",
+			fields: fields{
+				s: func() *stack[int] {
+					s := NewStack[int](3)
+					s.Push(1)
+
+					return s
+				}(),
+			},
+			want: 1,
+		},
+		{
+			name: "full stack should return correct length",
+			fields: fields{
+				s: func() *stack[int] {
+					s := NewStack[int](3)
+					s.Push(1)
+					s.Push(2)
+					s.Push(3)
+
+					return s
+				}(),
+			},
+			want: 3,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := tt.fields.s.Len(); got != tt.want {
+				t.Errorf("Len() = %v, want %v", got, tt.want)
+			}
 		})
 	}
 }

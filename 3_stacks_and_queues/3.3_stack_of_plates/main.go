@@ -96,7 +96,7 @@ func main() {
 				fmt.Println("stack set is not empty")
 			}
 		case "isFull":
-			if ss.IsFull(ss.Size()) {
+			if ss.IsFull(ss.Len()) {
 				fmt.Println("stack set is full")
 			} else {
 				fmt.Println("stack set is not full")

@@ -376,3 +376,44 @@ func Test_stackMin_Min(t *testing.T) {
 		})
 	}
 }
+
+func Test_stackMin_Len(t *testing.T) {
+	type fields struct {
+		values []StackMinValue
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		want   int
+	}{
+		{
+			name: "length of empty stack",
+			fields: fields{
+				values: []StackMinValue{},
+			},
+			want: 0,
+		},
+		{
+			name: "length of non-empty stack",
+			fields: fields{
+				values: []StackMinValue{
+					{
+						value: 1,
+						min:   1,
+					},
+				},
+			},
+			want: 1,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			sm := &stackMin{
+				values: tt.fields.values,
+			}
+			if got := sm.Len(); got != tt.want {
+				t.Errorf("stackMin.Len() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

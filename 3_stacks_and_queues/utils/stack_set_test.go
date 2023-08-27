@@ -527,7 +527,7 @@ func Test_stackSet_Print(t *testing.T) {
 	}
 }
 
-func Test_stackSet_Size(t *testing.T) {
+func Test_stackSet_Len(t *testing.T) {
 	type fields struct {
 		stacks    []*stack[int]
 		stackSize int
@@ -564,7 +564,7 @@ func Test_stackSet_Size(t *testing.T) {
 				stacks:    tt.fields.stacks,
 				stackSize: tt.fields.stackSize,
 			}
-			if got := ss.Size(); got != tt.want {
+			if got := ss.Len(); got != tt.want {
 				t.Errorf("stackSet.Size() = %v, want %v", got, tt.want)
 			}
 		})

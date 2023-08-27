@@ -102,7 +102,12 @@ func (sm *stackMin) Print(header string) {
 	fmt.Println()
 }
 
-// Peek returns the top value of the stack in O(1) time without removing it
+// Len returns the number of values in the stack
+func (sm *stackMin) Len() int {
+	return len(sm.values)
+}
+
+// Min returns the min value of the stack in O(1) time without removing it
 func (sm *stackMin) Min() int {
 	if sm.IsEmpty() {
 		// gracefully handle stack underflow

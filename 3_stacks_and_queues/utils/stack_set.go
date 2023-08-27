@@ -6,7 +6,6 @@ import "fmt"
 type StackSet interface {
 	Stack[int]
 	PopAt(int) (int, error)
-	Size() int
 }
 
 // stackSet represents a set of stacks
@@ -129,8 +128,8 @@ func (ss *stackSet) Print(header string) {
 	}
 }
 
-// Size returns the size of the stack set
-func (ss *stackSet) Size() int {
+// Len returns the size of the stack set
+func (ss *stackSet) Len() int {
 	return ss.stackSize
 }
 

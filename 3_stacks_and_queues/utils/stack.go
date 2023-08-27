@@ -15,6 +15,7 @@ type Stack[T StackValue] interface {
 	IsEmpty() bool
 	IsFull(int) bool
 	Print(header string)
+	Len() int
 }
 
 // stack represents a stack data structure implemented with an array
@@ -95,4 +96,16 @@ func (s *stack[T]) Print(header string) {
 	}
 
 	fmt.Println()
+}
+
+// Len returns the number of values in the stack
+func (s *stack[T]) Len() int {
+	if s == nil {
+		// gracefully handle nil stack
+		fmt.Println("empty stack")
+
+		return 0
+	}
+
+	return len(s.values)
 }
