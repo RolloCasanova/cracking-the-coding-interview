@@ -130,7 +130,7 @@ go test -v ./...
 [s2.8]: 2_linked_lists/2.8_loop_detection/main.go
 [t2.8]: 2_linked_lists/2.8_loop_detection/main_test.go
 
-#### Chapter 3: Stacks and Queues (4/6)
+#### Chapter 3: Stacks and Queues (5/6)
 
 |  #  | Problem                  | So3lution         | Tests         | Solved |
 |-----|--------------------------|:----------------:|:-------------:|:------:|
@@ -138,8 +138,8 @@ go test -v ./...
 | 3.2 | [Stack Min][p3.2]        | [solution][s3.2] | [tests][t3.2] |   ✅   |
 | 3.3 | [Stack of Plates][p3.3]  | [solution][s3.3] | [tests][t3.3] |   ✅   |
 | 3.4 | [Queue via Stacks][p3.4] | [solution][s3.4] | [tests][t3.4] |   ✅   |
-<!--
 | 3.5 | [Sort Stack][p3.5]       | [solution][s3.5] | [tests][t3.5] |   ✅   |
+<!--
 | 3.6 | [Animal Shelter][p3.6]   | [solution][s3.6] | [tests][t3.6] |   ✅   |
  -->
 
@@ -156,10 +156,10 @@ go test -v ./...
 [p3.4]: 3_stacks_and_queues/3.4_queue_via_stacks/README.md
 [s3.4]: 3_stacks_and_queues/3.4_queue_via_stacks/main.go
 [t3.4]: 3_stacks_and_queues/3.4_queue_via_stacks/main_test.go
-<!--
 [p3.5]: 3_stacks_and_queues/3.5_sort_stack/README.md
 [s3.5]: 3_stacks_and_queues/3.5_sort_stack/main.go
 [t3.5]: 3_stacks_and_queues/3.5_sort_stack/main_test.go
+<!--
 [p3.6]: 3_stacks_and_queues/3.6_animal_shelter/README.md
 [s3.6]: 3_stacks_and_queues/3.6_animal_shelter/main.go
 [t3.6]: 3_stacks_and_queues/3.6_animal_shelter/main_test.go
