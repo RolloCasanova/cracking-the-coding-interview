@@ -109,6 +109,8 @@ func main() {
 			} else {
 				fmt.Println("popped value:", val, "from stack:", stack)
 			}
+		case "exit":
+			return
 		default:
 			fmt.Println("invalid operation \" " + operation + "\"")
 		}

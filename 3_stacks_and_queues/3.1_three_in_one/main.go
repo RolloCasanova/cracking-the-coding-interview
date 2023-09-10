@@ -114,6 +114,8 @@ func main() {
 			ts.isEmpty(stack)
 		case "print":
 			ts.print(stack)
+		case "exit":
+			return
 		default:
 			fmt.Println("invalid operation \" " + operation + "\"")
 		}

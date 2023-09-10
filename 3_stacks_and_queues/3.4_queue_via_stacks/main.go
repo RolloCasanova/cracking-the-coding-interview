@@ -61,6 +61,8 @@ func main() {
 			}
 		case "print":
 			qvs.print()
+		case "exit":
+			return
 		default:
 			fmt.Println("invalid operation \" " + operation + "\"")
 		}

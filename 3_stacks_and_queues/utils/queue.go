@@ -8,11 +8,11 @@ type QueueType interface {
 }
 
 // Queue is the interface for a queue data structure
-type Queue interface {
-	Enqueue()
-	Dequeue()
-	Peek()
-	IsEmpty()
+type Queue[T QueueType] interface {
+	Enqueue(v T)
+	Dequeue() T
+	Peek() T
+	IsEmpty() bool
 }
 
 // queue is a queue data structure
