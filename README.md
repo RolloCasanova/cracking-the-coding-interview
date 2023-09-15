@@ -161,13 +161,25 @@ go test -v ./...
 [s3.6]: 3_stacks_and_queues/3.6_animal_shelter/main.go
 [t3.6]: 3_stacks_and_queues/3.6_animal_shelter/main_test.go
 
-#### Chapter 4: Trees and Graphs (1/12)
+#### Chapter 4: Trees and Graphs (2/12)
+<!--
+#### Chapter 4: Trees and Graphs (3/12)
+#### Chapter 4: Trees and Graphs (4/12)
+#### Chapter 4: Trees and Graphs (5/12)
+#### Chapter 4: Trees and Graphs (6/12)
+#### Chapter 4: Trees and Graphs (7/12)
+#### Chapter 4: Trees and Graphs (8/12)
+#### Chapter 4: Trees and Graphs (9/12)
+#### Chapter 4: Trees and Graphs (10/12)
+#### Chapter 4: Trees and Graphs (11/12)
+#### Chapter 4: Trees and Graphs (12/12)
+-->
 
 |  #  | Problem                       | Solution          | Tests          | Solved |
 |-----|-------------------------------|:-----------------:|:--------------:|:------:|
 | 4.1 | [Route Between Nodes][p4.1]   | [solution][s4.1]  | [tests][t4.1]  |   ✅   |
-<!--
 | 4.2 | [Minimal Tree][p4.2]          | [solution][s4.2]  | [tests][t4.2]  |   ✅   |
+<!--
 | 4.3 | [List of Depths][p4.3]        | [solution][s4.3]  | [tests][t4.3]  |   ✅   |
 | 4.4 | [Check Balanced][p4.4]        | [solution][s4.4]  | [tests][t4.4]  |   ✅   |
 | 4.5 | [Validate BST][p4.5]          | [solution][s4.5]  | [tests][t4.5]  |   ✅   |
@@ -184,10 +196,10 @@ go test -v ./...
 [p4.1]: 4_trees_and_graphs/4.1_route_between_nodes/README.md
 [s4.1]: 4_trees_and_graphs/4.1_route_between_nodes/main.go
 [t4.1]: 4_trees_and_graphs/4.1_route_between_nodes/main_test.go
-<!--
 [p4.2]: 4_trees_and_graphs/4.2_minimal_tree/README.md
 [s4.2]: 4_trees_and_graphs/4.2_minimal_tree/main.go
 [t4.2]: 4_trees_and_graphs/4.2_minimal_tree/main_test.go
+<!--
 [p4.3]: 4_trees_and_graphs/4.3_list_of_depths/README.md
 [s4.3]: 4_trees_and_graphs/4.3_list_of_depths/main.go
 [t4.3]: 4_trees_and_graphs/4.3_list_of_depths/main_test.go
