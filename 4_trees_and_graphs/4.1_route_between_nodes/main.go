@@ -144,6 +144,7 @@ loop:
 	}
 }
 
+// RouteBetweenNodes determines if there is a route between two nodes in a directed graph
 func RouteBetweenNodes(g directedgraph.DirectedGraph, start, end string, visited map[string]bool) bool {
 	q := arrayqueue.New()
 	visited[start] = true

@@ -63,6 +63,7 @@ func (b *BST) print() {
 	fmt.Println()
 }
 
+// MinimalTree creates a binary search tree with minimal height from a sorted array
 func MinimalTree(nums []int) *BST {
 	switch len(nums) {
 	case 0:
